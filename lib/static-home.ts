@@ -36,7 +36,7 @@ function headInjection(locale: Locale, path: string) {
 export async function renderStaticHome(rawLocale?: string) {
   const locale: Locale = isLocale(rawLocale) ? rawLocale : defaultLocale;
   const path = rawLocale && isLocale(rawLocale) ? localeHref(locale, "/") : "/";
-  const source = await readFile(join(process.cwd(), "reference-homepage.html"), "utf8");
+  const source = await readFile(join(process.cwd(), "index.html"), "utf8");
   const withLocale = source.replace(/<html\s+lang="[^"]*"/, `<html lang="${locale}"`);
   const withTitle = withLocale
     .replace(/<title>[\s\S]*?<\/title>/, `<title>${t(locale).metaTitle}</title>`)
