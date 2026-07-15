@@ -59,11 +59,28 @@ const oldFooterColumns = `<div class="footer-col"><h4>Journeys</h4><a href="week
 
 const newFooterColumns = `<div class="footer-col"><h4>Journeys</h4><a href="private-jordan-trips.html">Private Jordan trips</a><a href="family-travel.html">Family travel</a><a href="luxury-travel.html">Luxury travel</a></div><div class="footer-col"><h4>Explore</h4><a href="destinations.html">Destinations</a><a href="blog.html">Journal</a><a href="about-trust.html">About &amp; trust</a></div>`;
 
+const textEncodingFixes = [
+  ["\ufeff", ""],
+  ["\u00e2\u20ac\u201d", "\u2014"],
+  ["\u00e2\u20ac\u201c", "\u2013"],
+  ["\u00e2\u20ac\u2122", "\u2019"],
+  ["\u00c2\u00b7", "\u00b7"],
+  ["\u00c2\u00a9", "\u00a9"],
+  ["\u00c3\u00a9", "\u00e9"],
+  [
+    "\u00d8\u00a7\u00d9\u201e\u00d8\u00b9\u00d8\u00b1\u00d8\u00a8\u00d9\u0160\u00d8\u00a9",
+    "\u0627\u0644\u0639\u0631\u0628\u064a\u0629",
+  ],
+  ["\u00d8\u00b9", "\u0639"],
+] as const;
+
+function cleanTextEncoding(html: string) {
+  return textEncodingFixes.reduce((text, [from, to]) => text.replaceAll(from, to), html);
+}
+
 function cleanHtml(html: string) {
-  let output = html
+  let output = cleanTextEncoding(html)
     .replaceAll(oldFooterColumns, newFooterColumns)
-    .replaceAll("<b>Ø¹</b> Ø§Ù„Ø¹Ø±Ø¨ÙŠØ©", "<b>ع</b> العربية")
-    .replaceAll(">Ø§Ù„Ø¹Ø±Ø¨ÙŠØ©<", ">العربية<")
     .replace(/href="assets\//g, 'href="/assets/')
     .replace(/src="assets\//g, 'src="/assets/')
     .replace(/url\(assets\//g, "url(/assets/")
