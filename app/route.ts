@@ -1,9 +1,5 @@
-import { renderStaticHome } from "@/lib/static-home";
+import { diyarResponse } from "@/lib/diyar-html";
 
 export async function GET() {
-  return new Response(await renderStaticHome(), {
-    headers: {
-      "Content-Type": "text/html; charset=utf-8",
-    },
-  });
+  return diyarResponse();
 }

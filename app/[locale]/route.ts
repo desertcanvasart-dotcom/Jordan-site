@@ -1,5 +1,5 @@
-import { renderStaticHome } from "@/lib/static-home";
 import { isLocale } from "@/lib/i18n";
+import { diyarResponse } from "@/lib/diyar-html";
 
 export async function GET(_request: Request, { params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -8,9 +8,5 @@ export async function GET(_request: Request, { params }: { params: Promise<{ loc
     return new Response("Not found", { status: 404 });
   }
 
-  return new Response(await renderStaticHome(locale), {
-    headers: {
-      "Content-Type": "text/html; charset=utf-8",
-    },
-  });
+  return diyarResponse();
 }
