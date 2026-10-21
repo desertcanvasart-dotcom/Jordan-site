@@ -218,3 +218,25 @@ test('phone pattern is valid in modern HTML and requires actual digits', async (
   for (const phone of ['+966 512345678', '(202) 555-0123', '0791234567']) assert.ok(pattern.test(phone), phone);
   for (const phone of ['-------', '123', '1234567890123456', 'phone-number']) assert.ok(!pattern.test(phone), phone);
 });
+
+test('homepage concierge has localized controls, truthful configuration and working handoff targets', async () => {
+  const { load } = await import('cheerio');
+  for (const locale of ['en', 'ar']) {
+    const $ = load(await (await fetch(base + '/' + locale)).text());
+    assert.equal($('#tripComposer').length, 1);
+    assert.equal($('[data-journey]').length, 4);
+    assert.equal($('#tripComposer [name="need"]').length, 6);
+    assert.equal($('#tripComposer [name="days"]').length, 4);
+    assert.equal($('main .page-updated').length, 0);
+    assert.equal($('.footer .page-updated').length, 1);
+    assert.equal($('.footer-op').length, 0);
+    assert.equal($('#trust .trust-card').length, 0);
+    const payload = JSON.parse($('#concierge-data').text());
+    assert.equal(payload.locale, locale);
+    assert.equal(payload.whatsapp, business.whatsapp);
+    assert.equal(payload.trips.length, 4);
+    assert.equal($('.hero-actions a').eq(1).attr('href'), 'https://wa.me/' + business.whatsapp + '?text=' + encodeURIComponent(locale === 'ar' ? 'مرحباً ديار، أود مناقشة رحلة خاصة في الأردن.' : 'Hello Diyar, I would like to discuss a private Jordan trip.'));
+    assert.equal($('#escape a').eq(2).find('img').attr('src'), '/assets/img/wadirum-sunset.webp');
+    assert.match($('#escape a').eq(2).attr('href'), /^#journey-/);
+  }
+});

@@ -1,0 +1,10 @@
+{
+  "person": null,
+  "workingHours": null,
+  "replyMinutes": null,
+  "prices": {},
+  "refundBands": [],
+  "driveMinutes": {},
+  "hotelOptions": {},
+  "note": "Only publish approved business facts. Prices are per person with currency and basis; refund bands need approved days and percent; hours use Asia/Amman."
+}

@@ -1,6 +1,12 @@
 {
-  "brand": { "en": "Diyar", "ar": "ديار" },
-  "alternateNames": ["Diyar", "ديار"],
+  "brand": {
+    "en": "Diyar",
+    "ar": "ديار"
+  },
+  "alternateNames": [
+    "Diyar",
+    "ديار"
+  ],
   "productionUrl": "https://dyar.tours",
   "defaultLocale": "ar",
   "legalName": null,
@@ -8,7 +14,7 @@
   "founders": [],
   "team": [],
   "phone": null,
-  "whatsapp": null,
+  "whatsapp": "201158011600",
   "email": null,
   "address": null,
   "socialProfiles": [],
@@ -25,6 +31,34 @@
     "en": "Diyar plans private Jordan journeys for families worldwide, couples and travelers seeking family comfort, premium stays and Arabic or English support.",
     "ar": "تخطط ديار لرحلات خاصة في الأردن للعائلات والأزواج والمسافرين من الخليج، مع راحة عائلية وإقامات مميزة ودعم بالعربية والإنجليزية."
   },
-  "areaServed": { "en": ["Jordan", "Saudi Arabia", "United Arab Emirates"], "ar": ["الأردن", "المملكة العربية السعودية", "الإمارات العربية المتحدة"] },
-  "knowsAbout": { "en": ["Private Jordan trips", "Family travel", "Petra", "Wadi Rum", "Dead Sea", "Luxury desert camps"], "ar": ["رحلات خاصة في الأردن", "السفر العائلي", "البتراء", "وادي رم", "البحر الميت", "المخيمات الصحراوية الفاخرة"] }
+  "areaServed": {
+    "en": [
+      "Jordan",
+      "Saudi Arabia",
+      "United Arab Emirates"
+    ],
+    "ar": [
+      "الأردن",
+      "المملكة العربية السعودية",
+      "الإمارات العربية المتحدة"
+    ]
+  },
+  "knowsAbout": {
+    "en": [
+      "Private Jordan trips",
+      "Family travel",
+      "Petra",
+      "Wadi Rum",
+      "Dead Sea",
+      "Luxury desert camps"
+    ],
+    "ar": [
+      "رحلات خاصة في الأردن",
+      "السفر العائلي",
+      "البتراء",
+      "وادي رم",
+      "البحر الميت",
+      "المخيمات الصحراوية الفاخرة"
+    ]
+  }
 }

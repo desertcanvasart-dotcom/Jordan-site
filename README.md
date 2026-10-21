@@ -45,3 +45,25 @@ Use Lighthouse against a production server with mobile throttling, not `next dev
 Before public launch, complete Rich Results Test and Schema.org validation against final content, PageSpeed/field measurement on the deployed origin, manual VoiceOver/NVDA testing, preview checks on real sharing platforms, Search Console/Bing submissions and external AI summary checks. These require the confirmed production domain and, in several cases, owner accounts or real-user traffic. Robots rules express crawler preferences; they do not replace authentication for any future private admin routes.
 
 GitHub Actions runs lint, build and the site tests. No deployment is configured by this task. Remaining development-only audit findings should be assessed separately; do not downgrade Next or force dependency fixes to silence them.
+
+### Homepage concierge controls
+
+The homepage uses server-rendered native controls and `public/assets/js/concierge.js`.
+Selections use validated `who`, `days`, `pace`, `tier` and repeated `need` query parameters.
+The full inquiry form preserves those selections in the WhatsApp draft. Merely changing
+preferences or clicking the full-form link does not send a message.
+
+`content/concierge.json` holds optional approved facts:
+
+- `person`: `{ "name": "…", "image": "/assets/…" }` — use a consented real portrait.
+- `workingHours`: `{ "weekdays": [0,1,2,3,4], "start": 9, "end": 18 }` — weekdays use Sunday=0; timezone is Asia/Amman.
+- `replyMinutes`: a measured typical reply time; leave null until supported.
+- `prices`: trip slug → `boutique` / `luxury` → `{ "amount": 1880, "currency": "USD", "basis": { "en": "per person, …", "ar": "للشخص، …" } }`. Amounts require a confirmed trip/tier, occupancy basis and inclusions before publication. This example is a format, not a published price.
+- `hotelOptions`: trip slug → tier → `{ "name": "…", "image": "/assets/…" }`. Publish confirmed examples with appropriately licensed images.
+- `driveMinutes`: keys such as `amman-petra`, with reviewed planning estimates. No time is shown for an unconfigured leg.
+- `refundBands`: approved `{ "minDays": 30, "percent": 50 }` bands, sorted at runtime. Empty bands show the written-policy explanation; no percentage is invented.
+
+The seasonal helper deliberately uses sourced qualitative climate guidance, not unverified
+monthly temperature numbers, school calendars or assumed Eid dates. The desert photograph
+is a destination photograph, not a claim that a particular camp is included. The English
+and Arabic positioning remain intentionally different (homepage review item 10).

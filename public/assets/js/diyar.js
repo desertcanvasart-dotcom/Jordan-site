@@ -31,6 +31,8 @@ items.forEach(function(el){var p=el.previousElementSibling;el.style.transitionDe
     var message = intro + '\n\n' + fields.map(function (id, index) {
       return labels[index] + ': ' + (value(id) || '-');
     }).join('\n');
+    var savedIdea = document.getElementById('savedTripIdea');
+    if (savedIdea) message += '\n\n' + savedIdea.value;
     window.location.assign('https://wa.me/' + number + '?text=' + encodeURIComponent(message));
   });
 })();
@@ -55,4 +57,22 @@ items.forEach(function(el){var p=el.previousElementSibling;el.style.transitionDe
       if (event.matches) menu.open = false;
     });
   });
+})();
+
+// Carry the homepage's shareable preferences into the full inquiry form.
+(function () {
+  var box = document.getElementById('saved-trip-idea');
+  if (!box) return;
+  var params = new URLSearchParams(location.search), ar = document.documentElement.lang === 'ar';
+  var groups = ar ? ['زوجان','عائلة مع أطفال صغار','عائلة مع مراهقين','ثلاثة أجيال','أصدقاء'] : ['Couple','Family with young kids','Family with teens','Three generations','Friends'];
+  var days = [3,5,7,10], paces = ar ? ['هادئة','متوازنة','مكثفة'] : ['Relaxed','Balanced','Full'];
+  if (!params.has('who')) return;
+  function index(name, max) { var value = params.get(name); return /^\d+$/.test(value || '') && Number(value) <= max ? Number(value) : 0; }
+  var text = (ar ? 'فكرة رحلتك: ' : 'Your trip idea: ') + groups[index('who',4)] + ' · ' + days[index('days',3)] + (ar ? ' أيام · ' : ' days · ') + paces[index('pace',2)] + ' · ' + (index('tier',1) ? (ar ? 'فاخرة' : 'Luxury') : (ar ? 'بوتيك' : 'Boutique'));
+  var needs = ar ? ['أطفال دون ٦ سنوات','مشي محدود','طعام حلال','مراعاة الصلاة','طلب مرشدة','غرف متصلة / فيلا'] : ['Kids under 6','Limited walking','Halal dining','Prayer-aware pacing','Female guide request','Connecting rooms / villa'];
+  params.getAll('need').forEach(function (v) { if (/^[0-5]$/.test(v)) text += ' · ' + needs[Number(v)]; });
+  box.textContent = text;
+  var field = document.createElement('input'); field.type = 'hidden'; field.id = 'savedTripIdea'; field.value = text; document.getElementById('planForm').append(field);
+  var trip = document.getElementById('escape');
+  if (trip) trip.selectedIndex = days[index('days',3)] === 3 ? 0 : days[index('days',3)] === 5 ? (index('tier',1) ? 2 : 1) : days[index('days',3)] === 7 ? 3 : 4;
 })();

@@ -3,6 +3,7 @@ import { business, pagePath } from "./business";
 import { definition, editorial, type ArticleSlug, type PageContent, buildDocumentGraph } from "./structured-content";
 import { jsonLdTag } from "./jsonld";
 import type { Locale } from "./i18n";
+import { applyHomeExperience } from "./home-experience";
 import attractionFacts from "../content/attraction-facts.json";
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
@@ -43,8 +44,7 @@ function applyVisibleModules($: CheerioAPI, key: string, locale: Locale) {
     $(".trust-card").each((_, card) => {
       const heading = $(card).find("h3").text();
       if (/Licensed|مرخصة/.test(heading)) {
-        $(card).find("h3").text(local("Operator transparency", "وضوح بيانات المشغل"));
-        $(card).find("p").text(local("Legal operator and accreditation details must be confirmed before bookings open.", "يلزم تأكيد بيانات المشغل القانوني والاعتمادات قبل فتح الحجوزات."));
+        $(card).remove();
       }
     });
   }
@@ -60,14 +60,14 @@ function applyVisibleModules($: CheerioAPI, key: string, locale: Locale) {
   if (business.legalName) {
     $("body").html($("body").html()!.replaceAll("[Operating Company Name]", escapeHtml(business.legalName)).replaceAll("[اسم الشركة المشغلة]", escapeHtml(business.legalName)));
   } else {
-    $(".footer-op").text(local("Operating-company details are being verified before bookings open.", "نجري التحقق من بيانات الشركة المشغلة قبل فتح الحجوزات."));
+    $(".footer-op").remove();
   }
   if (key === "about-trust") {
     $(".hero-lede").text(local("Private Jordan journeys shaped around families worldwide, with clear planning and a proposal tailored to your group.", "رحلات خاصة في الأردن تناسب عائلات الخليج، مع تخطيط واضح وعرض مصمم وفق مجموعتكم."));
     $(".team").closest("section").remove();
     $(".prose").html(`<p>${escapeHtml(business.positioning[locale])}</p><p>${local("Our approach begins with your dates, party size, room preferences and pace. We build a private route, outline the included services and provide a written proposal for review.", "يبدأ نهجنا بمواعيدك وعدد المسافرين والغرف والوتيرة التي تفضلها. نبني مساراً خاصاً ونوضح الخدمات المشمولة ونقدم عرضاً مكتوباً للمراجعة.")}</p>`);
     const verified = `<section class="section"><div class="container legal"><h2>${local("Company and contact information", "بيانات الشركة والتواصل")}</h2><address>${business.legalName ? escapeHtml(business.legalName) : local("Legal operator details awaiting confirmation.", "بيانات المشغل القانوني بانتظار التأكيد.")}${business.address ? `<br>${escapeHtml(business.address.streetAddress[locale])}, ${escapeHtml(business.address.addressLocality[locale])}` : ""}</address>${business.foundingDate ? `<p>${local("Founded", "تأسست في")} <time datetime="${business.foundingDate}">${business.foundingDate}</time></p>` : ""}${[...business.founders, ...business.team].map(p => `<article><h3>${escapeHtml(p.name[locale])}</h3><p>${escapeHtml(p.jobTitle[locale])}</p><p>${escapeHtml(p.bio[locale])}</p></article>`).join("")}${business.memberships.length ? `<h3>${local("Memberships", "العضويات")}</h3><ul>${business.memberships.map(m => `<li><a href="${escapeHtml(m.url)}" rel="noreferrer">${escapeHtml(m.name[locale])}</a></li>`).join("")}</ul>` : ""}${business.awards.length ? `<h3>${local("Recognition", "التكريم")}</h3><ul>${business.awards.map(a => `<li>${escapeHtml(a[locale])}</li>`).join("")}</ul>` : ""}${business.press.map(p => `<p><a href="${escapeHtml(p.url)}">${escapeHtml(p.title[locale])}</a></p>`).join("")}</div></section>`;
-    $("main").append(verified);
+    if (business.legalName || business.address || business.foundingDate || business.team.length || business.founders.length || business.memberships.length) $("main").append(verified);
   }
   // Unknown phone and email values must not be presented as verified contact details.
   $("a[href^='https://wa.me/']").each((_, a) => {
@@ -87,6 +87,7 @@ function applyVisibleModules($: CheerioAPI, key: string, locale: Locale) {
     $("#planForm").attr("data-whatsapp", business.whatsapp || "").removeAttr("novalidate");
     $("#wa").attr({ autocomplete: "tel", pattern: String.raw`(?=(?:\D*\d){7,15}\D*$)\+?[\d\s\(\)\-]+` });
     $("#name").attr("autocomplete", "name");
+    $("#planForm").prepend(`<div id="saved-trip-idea" class="saved-trip-idea" aria-live="polite"></div>`);
     $("#planForm").append(`<p id="form-status" class="form-status" role="status" aria-live="polite"></p>`);
     $(".plan-form > p").first().text(business.whatsapp ? local("We continue on WhatsApp, in Arabic or English.", "نتابع معك على واتساب بالعربية أو الإنجليزية.") : local("Contact details are being verified. Trip inquiries will open when the operator's WhatsApp number is confirmed.", "نجري التحقق من بيانات التواصل. تفتح استفسارات الرحلات بعد تأكيد رقم واتساب الخاص بالمشغل."));
     if (!business.whatsapp) $("#planForm button[type='submit']").text(local("Check inquiry availability", "تحقق من إتاحة الاستفسارات")).attr("formnovalidate", "");
@@ -102,6 +103,7 @@ export function enhanceDocument(html: string, key: string, locale: Locale, origi
   const def = definition(key);
   $("body").addClass(`page-${def.type}`);
   applyVisibleModules($, key, locale);
+  if (key === "home") applyHomeExperience($, locale);
   $("html").attr({ lang: locale, dir: locale === "ar" ? "rtl" : "ltr" });
   $("main").attr({ id: "main-content", tabindex: "-1" });
   $("body").prepend(`<a class="skip-link" href="#main-content">${locale === "ar" ? "انتقل إلى المحتوى" : "Skip to content"}</a>`);
@@ -165,7 +167,7 @@ export function enhanceDocument(html: string, key: string, locale: Locale, origi
   $("head").append('<link rel="icon" href="/assets/logo.svg" type="image/svg+xml">');
   $("script[src]").attr("defer", "");
   $("a.lang, .footer a[hreflang]").attr("href", pagePath(locale === "ar" ? "en" : "ar", key));
-  $("main").append(`<p class="page-updated container">${locale === "ar" ? "آخر تحديث للصفحة" : "Page last updated"}: <time datetime="${def.updated}">${def.updated}</time></p>`);
+  $(".footer").append(`<p class="page-updated container">${locale === "ar" ? "آخر تحديث للصفحة" : "Page last updated"}: <time datetime="${def.updated}">${def.updated}</time></p>`);
   const content: PageContent = {
     key, locale, url, title, description, heading: plain($, "h1"), updated: def.updated, image,
     text: plain($, "main"),
