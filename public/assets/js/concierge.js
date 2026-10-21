@@ -14,11 +14,19 @@
     Array.from(form.elements).forEach(function (el) { if (el.name === 'need' && el.value === value) el.checked = true; });
   });
   function element(tag, text) { var el = document.createElement(tag); el.textContent = text; return el; }
+  function whenNear(node, callback) {
+    if (!('IntersectionObserver' in window)) { callback(); return; }
+    var observer = new IntersectionObserver(function(entries) { if (entries[0].isIntersecting) { observer.disconnect(); callback(); } }, { rootMargin: '240px' });
+    observer.observe(node);
+  }
   function selected(name) { return Number(form.querySelector('input[name="' + name + '"]:checked').value); }
   function routeFor(days, pace, tier) {
     if (days === 5 && tier === 1) return ['amman','rum','rum','deadsea','amman'];
     if (days === 3) return pace === 0 ? ['amman','deadsea','amman'] : ['amman','petra','amman'];
     if (days === 5) return pace === 0 ? ['amman','petra','petra','deadsea','amman'] : ['amman','petra','rum','deadsea','amman'];
+    if (days === 7 && pace === 0) return ['amman','amman','petra','petra','deadsea','deadsea','amman'];
+    if (days === 7 && pace === 2) return ['amman','jerash','petra','rum','aqaba','deadsea','amman'];
+    if (days === 10 && pace === 0) return ['amman','amman','petra','petra','rum','rum','deadsea','deadsea','deadsea','amman'];
     if (days === 7) return ['amman','jerash','petra','petra','rum','deadsea','amman'];
     return ['amman','jerash','amman','petra','petra','rum','rum','aqaba','deadsea','amman'];
   }
@@ -83,7 +91,8 @@
     slider.addEventListener('input',updateDay);detail.querySelector('[data-trip-tier]').addEventListener('change',updateDay);
     detail.addEventListener('toggle',function(){if(detail.open){document.querySelectorAll('[data-journey]').forEach(function(other){if(other!==detail)other.open=false;});updateDay();}});
     detail.addEventListener('pointerenter',function(){mapRoute(trip.route,trip.name);});
-    detail.addEventListener('focusin',function(){mapRoute(trip.route,trip.name);});updateDay();
+    detail.addEventListener('focusin',function(){mapRoute(trip.route,trip.name);});
+    if(detail.open)whenNear(detail,updateDay);
   });
   document.querySelectorAll('[data-trip-focus]').forEach(function(card){
     var trip=data.trips.find(function(x){return x.key===card.dataset.tripFocus;});
@@ -121,7 +130,5 @@
   }
   var sticky=document.querySelector('.sticky-whatsapp');
   if(sticky && 'IntersectionObserver' in window)new IntersectionObserver(function(entries){sticky.classList.toggle('visible',!entries[0].isIntersecting);}).observe(document.querySelector('.hero'));
-  updateComposer(false);
-  var initialJourney=data.trips.find(function(trip){return document.getElementById('journey-'+trip.key).open;});
-  if(initialJourney)mapRoute(initialJourney.route,initialJourney.name);
+  whenNear(document.getElementById('trip-composer'),function(){updateComposer(false);});
 })();

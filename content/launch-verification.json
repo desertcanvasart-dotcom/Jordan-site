@@ -20,9 +20,9 @@
     "evidence": null
   },
   "lighthouse90AllPageTypesAndLanguages": {
-    "passed": true,
-    "checkedAt": "2026-10-12",
-    "evidence": "48 local cold mobile Lighthouse audits; performance 90\u2013100, other categories 100. outputs/lighthouse-summary.json"
+    "passed": false,
+    "checkedAt": "2026-10-21",
+    "evidence": "Interactive homepage re-audit is below the 90 performance target. See outputs/homepage-lighthouse-summary.json. A complete new audit matrix is required before launch."
   },
   "wcagAAManualVoiceOverAndNVDA": {
     "passed": false,

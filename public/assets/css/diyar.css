@@ -568,3 +568,5 @@ html[lang="ar"] .hero-card::before { background: linear-gradient(270deg, rgba(25
 /* Keep the longer concierge page inexpensive before its sections enter view. */
 .interactive-home main>section:not(.hero){content-visibility:auto;contain-intrinsic-size:auto 800px}
 @media(max-width:800px){.interactive-home .hero-card::after{display:none}.interactive-home #escape img{animation:none!important;transform:none!important}}
+
+.choice span{background:#f8f2e4;color:#251a11}.choice input:checked+span{background:#723d2c;color:#fff}
