@@ -1,0 +1,47 @@
+{
+  "businessFactsAndLegalApproval": {
+    "passed": false,
+    "checkedAt": null,
+    "evidence": null
+  },
+  "googleRichResultsRepresentativeTypes": {
+    "passed": true,
+    "checkedAt": "2026-10-12",
+    "evidence": "Code-mode test: 56 valid items; non-critical notices. https://search.google.com/test/rich-results/result?id=xfiX8ckRT2gXrIjq2ot9_g"
+  },
+  "schemaOrgValidationAllPages": {
+    "passed": true,
+    "checkedAt": "2026-10-12",
+    "evidence": "Code-mode validation of all 48 rendered page graphs: 98 items, zero errors and warnings. outputs/schema-validation.png"
+  },
+  "productionPageSpeedAndCoreWebVitals": {
+    "passed": false,
+    "checkedAt": null,
+    "evidence": null
+  },
+  "lighthouse90AllPageTypesAndLanguages": {
+    "passed": true,
+    "checkedAt": "2026-10-12",
+    "evidence": "48 local cold mobile Lighthouse audits; performance 90\u2013100, other categories 100. outputs/lighthouse-summary.json"
+  },
+  "wcagAAManualVoiceOverAndNVDA": {
+    "passed": false,
+    "checkedAt": null,
+    "evidence": null
+  },
+  "socialPreviewSharing": {
+    "passed": false,
+    "checkedAt": null,
+    "evidence": null
+  },
+  "searchConsoleAndBingSitemapSubmission": {
+    "passed": false,
+    "checkedAt": null,
+    "evidence": null
+  },
+  "externalAISummaryChecks": {
+    "passed": false,
+    "checkedAt": null,
+    "evidence": null
+  }
+}

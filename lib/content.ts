@@ -1,12 +1,13 @@
+import { siteOrigin } from "./business";
 import type { Locale } from "./i18n";
 
-export const SITE_URL = "https://www.jordanbylocal.com";
-export const OG_IMAGE = "https://images.unsplash.com/photo-1548786811-dd6e453ccca7?auto=format&fit=crop&w=1200&q=82";
+export const SITE_URL = siteOrigin();
+export const OG_IMAGE = `${SITE_URL}/assets/og/wadirum-sunset.jpg`;
 
 export const site = {
-  name: "Jordan by Local",
-  arName: "الأردن بعيون محلية",
-  alternateNames: ["Jordan by Local", "الأردن بعيون محلية"],
+  name: "Diyar",
+  arName: "ديار",
+  alternateNames: ["Diyar", "ديار"],
   legalName: "Operating company name to be confirmed",
   foundingDate: "",
   founders: [
@@ -50,7 +51,7 @@ export const site = {
   positioning:
     "Arabic-first premium Jordan travel concierge designing private Jordan journeys for Gulf families, couples, and luxury travelers.",
   llmsOffer:
-    "Jordan by Local designs private Jordan journeys around travel desire rather than generic destination lists. Launch journeys include a three-day weekend escape, a five-day family journey, a luxury desert and Dead Sea escape, and a seven-day full Jordan route covering Amman, Jerash, Petra, Wadi Rum, the Dead Sea, and optional Aqaba extensions.",
+    "Diyar designs private Jordan journeys around travel desire rather than generic destination lists. Launch journeys include a three-day weekend escape, a five-day family journey, a luxury desert and Dead Sea escape, and a seven-day full Jordan route covering Amman, Jerash, Petra, Wadi Rum, the Dead Sea, and optional Aqaba extensions.",
   llmsPricing:
     "The brand uses a consultation-led booking model. Travelers share dates, group size, comfort level, and preferences through WhatsApp or a short lead form. The team then prepares a private itinerary and quote. Published starting prices can be added later once supplier agreements and pricing policy are approved.",
 };
@@ -101,7 +102,7 @@ export const journeys: Journey[] = [
 
 export const copy = {
   ar: {
-    metaTitle: "الأردن بعيون محلية | رحلات الأردن الخاصة",
+    metaTitle: "ديار | رحلات الأردن الخاصة",
     metaDescription:
       "رحلات أردن خاصة ومصممة للعائلات والمسافرين من الخليج: البتراء، وادي رم، البحر الميت، عمّان، جرش والعقبة مع تخطيط خاص ودعم واتساب.",
     nav: {
@@ -172,7 +173,7 @@ export const copy = {
     },
   },
   en: {
-    metaTitle: "Jordan by Local | Private Jordan Travel Packages",
+    metaTitle: "Diyar | Private Jordan Travel Packages",
     metaDescription:
       "Private Jordan travel packages for Gulf travelers: Petra, Wadi Rum, Dead Sea, Amman, Jerash and Aqaba with private planning and WhatsApp support.",
     nav: {

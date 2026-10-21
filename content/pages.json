@@ -1,0 +1,303 @@
+{
+  "home": {
+    "type": "home",
+    "updated": "2026-10-12",
+    "image": "wadirum-sunset",
+    "title": {
+      "en": "Private Jordan Journeys for Gulf Families & Couples | Diyar",
+      "ar": "رحلات خاصة في الأردن للعائلات والمسافرين من الخليج | ديار"
+    },
+    "description": {
+      "en": "Discover private Jordan journeys for Gulf families and couples. Compare routes through Petra, Wadi Rum and the Dead Sea, then plan your trip with Diyar.",
+      "ar": "اكتشف رحلات ديار الخاصة في الأردن للعائلات والأزواج من الخليج. قارن مسارات البتراء ووادي رم والبحر الميت، واختر رحلة تناسب مواعيدك وراحتك ووتيرة مجموعتك."
+    }
+  },
+  "private-jordan-trips": {
+    "type": "collection",
+    "updated": "2026-10-12",
+    "image": "petra",
+    "title": {
+      "en": "Private Jordan Trips: Routes, Planning & FAQs | Diyar",
+      "ar": "رحلات الأردن الخاصة: المسارات والتخطيط وأسئلتكم | ديار"
+    },
+    "description": {
+      "en": "Compare private Jordan trips with Diyar, from short escapes to family and luxury journeys. Explore sample routes, planning steps and answers before booking.",
+      "ar": "قارن رحلات ديار الخاصة في الأردن، من العطلات القصيرة إلى الرحلات العائلية والفاخرة. استكشف المسارات وخطوات التخطيط والإجابات قبل طلب عرض رحلتك المكتوب."
+    }
+  },
+  "destinations": {
+    "type": "collection",
+    "updated": "2026-10-12",
+    "image": "petra",
+    "title": {
+      "en": "Jordan Destinations: Petra, Wadi Rum & More | Diyar",
+      "ar": "وجهات الأردن: البتراء ووادي رم والبحر الميت وأكثر | ديار"
+    },
+    "description": {
+      "en": "Explore six Jordan destinations with Diyar: Petra, Wadi Rum, the Dead Sea, Amman, Jerash and Aqaba. Choose the places that shape your private travel itinerary.",
+      "ar": "اكتشف ست وجهات أردنية مع ديار: البتراء ووادي رم والبحر الميت وعمّان وجرش والعقبة. اختر الأماكن التي تحبها لتصميم رحلة خاصة وفق مواعيدك ووتيرة مجموعتك."
+    }
+  },
+  "petra": {
+    "type": "attraction",
+    "updated": "2026-10-12",
+    "image": "petra",
+    "title": {
+      "en": "Petra, Jordan: Highlights & Private Trip Planning | Diyar",
+      "ar": "البتراء في الأردن: أبرز المعالم وتخطيط رحلتك الخاصة | ديار"
+    },
+    "description": {
+      "en": "Explore Petra with Diyar, from the Siq and Treasury to Royal Tombs and an optional Monastery walk. Plan your visit within a private Jordan family itinerary.",
+      "ar": "اكتشف البتراء مع ديار، من السيق والخزنة إلى المقابر الملكية وخيار المشي إلى الدير. خطط لزيارة مريحة ضمن مسار أردني خاص يناسب عائلتك ومواعيدك وتفضيلاتك."
+    }
+  },
+  "wadi-rum": {
+    "type": "destination",
+    "updated": "2026-10-12",
+    "image": "wadirum",
+    "title": {
+      "en": "Wadi Rum: Desert Camps & Private Jordan Journeys | Diyar",
+      "ar": "وادي رم: المخيمات الصحراوية ورحلات الأردن الخاصة | ديار"
+    },
+    "description": {
+      "en": "Discover Wadi Rum with private jeep routes, sunset tea and a night in a desert camp. Explore how Diyar includes the valley in a personalized Jordan journey.",
+      "ar": "اكتشف وادي رم بجولات جيب خاصة وشاي عند الغروب وليلة في مخيم صحراوي. تعرف كيف تضيف ديار هذه التجربة إلى رحلتك الخاصة في الأردن وفق مواعيدك ووتيرة مجموعتك."
+    }
+  },
+  "dead-sea": {
+    "type": "destination",
+    "updated": "2026-10-12",
+    "image": "deadsea",
+    "title": {
+      "en": "Dead Sea, Jordan: Resorts & Relaxed Private Trips | Diyar",
+      "ar": "البحر الميت: المنتجعات والاسترخاء في رحلتك الخاصة | ديار"
+    },
+    "description": {
+      "en": "Explore a Dead Sea stay with Diyar: floating, resort time and a relaxed finish to your Jordan journey. Compare private family routes and short-break options.",
+      "ar": "اكتشف إقامة على البحر الميت مع ديار: الطفو ووقت المنتجع وخاتمة هادئة لرحلتك الأردنية. قارن المسارات العائلية الخاصة وخيارات العطلات القصيرة قبل التخطيط."
+    }
+  },
+  "jerash": {
+    "type": "attraction",
+    "updated": "2026-10-12",
+    "image": "jerash",
+    "title": {
+      "en": "Jerash, Jordan: Roman Heritage & Private Visits | Diyar",
+      "ar": "جرش في الأردن: الآثار الرومانية وتخطيط زيارة خاصة | ديار"
+    },
+    "description": {
+      "en": "Discover Jerash, its Roman streets, temples and theatres, with Diyar. Explore a private northern Jordan route with time for nearby Ajloun and family breaks.",
+      "ar": "اكتشف جرش وشوارعها ومعابدها ومسارحها الرومانية مع ديار. خطط لمسار خاص شمال الأردن مع وقت لعجلون القريبة واستراحات تناسب عائلتك ومواعيد رحلتكم المقبلة."
+    }
+  },
+  "amman": {
+    "type": "destination",
+    "updated": "2026-10-12",
+    "image": "amman",
+    "title": {
+      "en": "Amman, Jordan: Food, Heritage & Private Journeys | Diyar",
+      "ar": "عمّان في الأردن: الطعام والتراث ورحلاتكم الخاصة | ديار"
+    },
+    "description": {
+      "en": "Explore Amman with Diyar: the Citadel, Roman Theatre, old souqs and local food. See how a stay in the capital fits into your private Jordan travel itinerary.",
+      "ar": "اكتشف عمّان مع ديار: القلعة والمدرج الروماني والأسواق القديمة والطعام المحلي. تعرف كيف تناسب إقامة في العاصمة مسار رحلتكم الخاصة في الأردن وفق وتيرتكم."
+    }
+  },
+  "aqaba": {
+    "type": "destination",
+    "updated": "2026-10-12",
+    "image": "aqaba",
+    "title": {
+      "en": "Aqaba, Jordan: Red Sea Stays & Private Journeys | Diyar",
+      "ar": "العقبة في الأردن: البحر الأحمر والإقامات والرحلات | ديار"
+    },
+    "description": {
+      "en": "Explore Aqaba and the Red Sea with Diyar, from beach stays to snorkelling and optional boat trips. Discuss adding a relaxed finish to your private Jordan trip.",
+      "ar": "اكتشف العقبة والبحر الأحمر مع ديار، من الإقامة الشاطئية إلى الغطس ورحلات القوارب الاختيارية. ناقش إضافة خاتمة مريحة إلى برنامج رحلتك الخاصة في الأردن."
+    }
+  },
+  "weekend-escape": {
+    "type": "trip",
+    "updated": "2026-10-12",
+    "image": "deadsea",
+    "days": 3,
+    "stops": [
+      "amman",
+      "dead-sea",
+      "wadi-rum"
+    ],
+    "title": {
+      "en": "Jordan Weekend Escape: A Three-Day Private Trip | Diyar",
+      "ar": "عطلة نهاية أسبوع في الأردن: رحلة خاصة لثلاثة أيام | ديار"
+    },
+    "description": {
+      "en": "Plan a three-day Jordan Weekend Escape with Diyar. Choose a Dead Sea resort or Wadi Rum camp, with private transfers and a route shaped around your dates.",
+      "ar": "خطط لعطلة نهاية أسبوع في الأردن لثلاثة أيام مع ديار. اختر منتجع البحر الميت أو مخيم وادي رم، مع انتقالات خاصة ومسار يناسب مواعيدك وراحة مجموعتك ووتيرتها."
+    }
+  },
+  "family-journey": {
+    "type": "trip",
+    "updated": "2026-10-12",
+    "image": "petra",
+    "days": 5,
+    "stops": [
+      "amman",
+      "jerash",
+      "petra",
+      "wadi-rum",
+      "dead-sea"
+    ],
+    "title": {
+      "en": "Jordan Family Journey: Five Days at Your Own Pace | Diyar",
+      "ar": "رحلة عائلية في الأردن: خمسة أيام وفق وتيرة عائلتكم | ديار"
+    },
+    "description": {
+      "en": "Explore Diyar's five-day Jordan Family Journey, with Petra, Wadi Rum and the Dead Sea. Review the daily route, private transport and services before booking.",
+      "ar": "اكتشف رحلة ديار العائلية في الأردن لخمسة أيام، مع البتراء ووادي رم والبحر الميت. راجع المسار اليومي والنقل الخاص والخدمات المشمولة قبل تأكيد الحجز المكتوب."
+    }
+  },
+  "full-jordan-journey": {
+    "type": "trip",
+    "updated": "2026-10-12",
+    "image": "jerash",
+    "days": 7,
+    "stops": [
+      "amman",
+      "jerash",
+      "petra",
+      "wadi-rum",
+      "aqaba"
+    ],
+    "title": {
+      "en": "Full Jordan Journey: A Seven-Day Private Route | Diyar",
+      "ar": "رحلة الأردن المتكاملة: مسار خاص على مدى سبعة أيام | ديار"
+    },
+    "description": {
+      "en": "Discover Diyar's seven-day Full Jordan Journey, from Amman and Jerash to Petra and Wadi Rum. Review the sample route, services and optional Aqaba finish.",
+      "ar": "اكتشف رحلة الأردن المتكاملة مع ديار لسبعة أيام، من عمّان وجرش إلى البتراء ووادي رم. راجع المسار المقترح والخدمات المشمولة وخيار إنهاء الرحلة في العقبة."
+    }
+  },
+  "luxury-desert-dead-sea": {
+    "type": "trip",
+    "updated": "2026-10-12",
+    "image": "wadirum",
+    "days": 5,
+    "stops": [
+      "dead-sea",
+      "wadi-rum",
+      "petra"
+    ],
+    "title": {
+      "en": "Luxury Wadi Rum & Dead Sea: Private Jordan Escape | Diyar",
+      "ar": "وادي رم والبحر الميت: رحلة فاخرة خاصة في الأردن | ديار"
+    },
+    "description": {
+      "en": "Explore a luxury Wadi Rum camp and Dead Sea resort journey with Diyar. Review the sample days, private guiding and services in your personalized trip proposal.",
+      "ar": "اكتشف رحلة مخيم فاخر في وادي رم ومنتجع على البحر الميت مع ديار. راجع الأيام المقترحة والإرشاد الخاص والخدمات في عرض رحلة مصمم وفق مواعيدك وتفضيلات مجموعتك."
+    }
+  },
+  "family-travel": {
+    "type": "service",
+    "updated": "2026-10-12",
+    "image": "deadsea",
+    "title": {
+      "en": "Family Travel in Jordan: Comfort, Privacy & Care | Diyar",
+      "ar": "السفر العائلي في الأردن: الراحة والخصوصية والعناية | ديار"
+    },
+    "description": {
+      "en": "Plan private family travel in Jordan with Diyar. Discuss room arrangements, gentle pacing, meals, rest stops and experiences around Petra and Wadi Rum.",
+      "ar": "خطط لسفر عائلي خاص في الأردن مع ديار. ناقش ترتيب الغرف والوتيرة الهادئة والوجبات واستراحات الراحة والتجارب قرب البتراء ووادي رم وفق أعمار أفراد عائلتك."
+    }
+  },
+  "luxury-travel": {
+    "type": "service",
+    "updated": "2026-10-12",
+    "image": "wadirum",
+    "title": {
+      "en": "Luxury Jordan Travel: Private Guides & Fine Stays | Diyar",
+      "ar": "السفر الفاخر في الأردن: مرشدون خاصون وإقامات مميزة | ديار"
+    },
+    "description": {
+      "en": "Explore private luxury travel in Jordan with Diyar. Discuss premium hotels, desert camps, guiding and dining, then review the details of a tailored proposal.",
+      "ar": "اكتشف السفر الفاخر الخاص في الأردن مع ديار. ناقش الفنادق المميزة والمخيمات الصحراوية والإرشاد والطعام، ثم راجع تفاصيل عرض مصمم وفق تفضيلاتك ومواعيدكم."
+    }
+  },
+  "about-trust": {
+    "type": "about",
+    "updated": "2026-10-12",
+    "image": "amman",
+    "title": {
+      "en": "Our Approach to Private Jordan Travel & Planning | Diyar",
+      "ar": "عن ديار: تخطيط رحلات خاصة ومريحة للعائلات في الأردن | ديار"
+    },
+    "description": {
+      "en": "Learn how Diyar plans private Jordan journeys around your group, comfort and pace. Review the service approach and business details confirmed for publication.",
+      "ar": "تعرف كيف تخطط ديار لرحلات أردنية خاصة وفق مجموعتك وراحتك ووتيرتك. راجع نهج الخدمة وبيانات الشركة المؤكدة للنشر وخطوات إعداد عرض مكتوب قبل تأكيد الحجز."
+    }
+  },
+  "blog": {
+    "type": "editorial-index",
+    "updated": "2026-10-12",
+    "image": "wadirum",
+    "title": {
+      "en": "Jordan Travel Journal: Practical Family Planning | Diyar",
+      "ar": "مجلة السفر إلى الأردن: أدلة عملية لتخطيط رحلة عائلية | ديار"
+    },
+    "description": {
+      "en": "Read Diyar's practical Jordan planning guides: compare family routes, prepare trip preferences and understand a written quote, with dates and clear attribution.",
+      "ar": "اقرأ أدلة ديار العملية لتخطيط رحلات الأردن: قارن المسارات العائلية وجهز تفضيلات السفر وافهم العرض المكتوب، مع تواريخ واضحة ونسب المحتوى إلى الجهة المعدة."
+    }
+  },
+  "privacy": {
+    "type": "legal",
+    "updated": "2026-10-12",
+    "image": "amman",
+    "title": {
+      "en": "Privacy Policy: Personal Data & Trip Planning | Diyar",
+      "ar": "سياسة الخصوصية: بياناتكم الشخصية وتخطيط الرحلات | ديار"
+    },
+    "description": {
+      "en": "Read Diyar's draft privacy policy for private Jordan trip planning, covering contact information, data use and your rights. Final terms require operator review.",
+      "ar": "اقرأ مسودة سياسة خصوصية ديار لتخطيط رحلات الأردن الخاصة، حول بيانات التواصل واستخدام المعلومات وحقوقك. تتطلب الصياغة النهائية مراجعة المشغل قبل الحجز."
+    }
+  },
+  "terms": {
+    "type": "legal",
+    "updated": "2026-10-12",
+    "image": "amman",
+    "title": {
+      "en": "Terms of Service: Private Jordan Trip Bookings | Diyar",
+      "ar": "شروط الخدمة: حجوزات رحلاتكم الخاصة إلى الأردن | ديار"
+    },
+    "description": {
+      "en": "Read Diyar's draft terms for private Jordan trips, including proposals, booking confirmation, payments and responsibilities. Confirm final terms before booking.",
+      "ar": "اقرأ مسودة شروط ديار لرحلات الأردن الخاصة، حول العروض وتأكيد الحجوزات والمدفوعات والمسؤوليات. اطلب الشروط النهائية المكتوبة وراجعها قبل تأكيد رحلتك الخاصة."
+    }
+  },
+  "cancellation-policy": {
+    "type": "legal",
+    "updated": "2026-10-12",
+    "image": "amman",
+    "title": {
+      "en": "Cancellation Policy: Jordan Trip Changes & Refunds | Diyar",
+      "ar": "سياسة الإلغاء: تعديل رحلات الأردن والمبالغ المستردة | ديار"
+    },
+    "description": {
+      "en": "Read Diyar's draft cancellation policy for Jordan journeys, covering changes, refunds and cancellation timing. Request final terms with your written proposal.",
+      "ar": "اقرأ مسودة سياسة إلغاء رحلات ديار في الأردن، حول التعديلات والمبالغ المستردة ومواعيد الإلغاء. اطلب الشروط النهائية المكتوبة مع عرض رحلتك قبل تأكيد الحجز."
+    }
+  },
+  "plan-your-trip": {
+    "type": "contact",
+    "updated": "2026-10-12",
+    "image": "petra",
+    "title": {
+      "en": "Plan Your Private Jordan Trip: Dates & Preferences | Diyar",
+      "ar": "خطط لرحلتك الخاصة إلى الأردن: شاركنا تفضيلاتك | ديار"
+    },
+    "description": {
+      "en": "Share your dates, party size, trip preferences and language with Diyar to plan a private Jordan journey. Check contact availability before sending an inquiry.",
+      "ar": "شارك ديار مواعيدك وعدد المسافرين وتفضيلات الرحلة واللغة لتخطيط رحلة خاصة في الأردن. تحقق من إتاحة التواصل قبل إرسال الاستفسار ومراجعة برنامجك المقترح."
+    }
+  }
+}

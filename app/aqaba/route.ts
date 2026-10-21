@@ -1,5 +1,5 @@
 import { diyarResponse } from "@/lib/diyar-html";
 
-export async function GET() {
-  return diyarResponse("aqaba");
+export async function GET(request: Request) {
+  return diyarResponse("aqaba", "en", request);
 }

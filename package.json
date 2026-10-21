@@ -6,22 +6,27 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "test:localization": "npm run build && node --test tests/localization.test.mjs",
+    "prepare:assets": "node scripts/prepare-assets.mjs",
+    "check:launch": "node scripts/check-launch.mjs"
   },
   "dependencies": {
-    "next": "16.2.7",
+    "cheerio": "^1.2.0",
+    "next": "^16.4.0",
     "react": "19.2.4",
-    "react-dom": "19.2.4"
+    "react-dom": "19.2.4",
+    "sharp": "^0.35.5"
   },
   "devDependencies": {
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
-    "eslint-config-next": "16.2.7",
+    "eslint-config-next": "^16.4.0",
     "typescript": "^5"
   },
   "engines": {
-    "node": ">=20.9.0"
+    "node": ">=22.14.0"
   }
 }

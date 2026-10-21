@@ -1,0 +1,86 @@
+{
+  "petra": {
+    "geo": {
+      "latitude": 30.33056,
+      "longitude": 35.44333
+    },
+    "source": "https://whc.unesco.org/en/list/326/",
+    "sourceName": "UNESCO World Heritage Centre",
+    "verified": "2026-10-12",
+    "history": {
+      "en": "Petra was a Nabataean caravan centre. Its rock-cut tombs and temples, together with extensive water-management remains, explain the site's archaeological importance. UNESCO inscribed Petra on the World Heritage List in 1985.",
+      "ar": "كانت البتراء مركزاً نبطياً للقوافل. توضح المقابر والمعابد المنحوتة في الصخر وبقايا أنظمة إدارة المياه أهميتها الأثرية. أدرجت اليونسكو البتراء على قائمة التراث العالمي عام ١٩٨٥."
+    },
+    "hoursSource": "https://www.visitpetra.jo/en/Openinghours",
+    "hours": [
+      {
+        "label": {
+          "en": "Summer: 2 March–1 October 2026",
+          "ar": "الصيف: من ٢ مارس إلى ١ أكتوبر ٢٠٢٦"
+        },
+        "opens": "06:00",
+        "closes": "18:00",
+        "validFrom": "2026-03-02",
+        "validThrough": "2026-10-01"
+      },
+      {
+        "label": {
+          "en": "Winter: 2 October 2026–1 March 2027",
+          "ar": "الشتاء: من ٢ أكتوبر ٢٠٢٦ إلى ١ مارس ٢٠٢٧"
+        },
+        "opens": "06:30",
+        "closes": "17:00",
+        "validFrom": "2026-10-02",
+        "validThrough": "2027-03-01"
+      }
+    ]
+  },
+  "jerash": {
+    "geo": {
+      "latitude": 32.2766875,
+      "longitude": 35.8893125
+    },
+    "source": "https://international.visitjordan.com/wheretogo/jerash/",
+    "sourceName": "Jordan Tourism Board",
+    "verified": "2026-10-12",
+    "hoursSource": "https://jordanpass.jo/Contents/Opening_Hours.aspx",
+    "hours": [
+      {
+        "label": {
+          "en": "Winter (November through April)",
+          "ar": "الشتاء (نوفمبر إلى أبريل)"
+        },
+        "opens": "08:00",
+        "closes": "16:00"
+      },
+      {
+        "label": {
+          "en": "Summer",
+          "ar": "الصيف"
+        },
+        "opens": "08:00",
+        "closes": "18:30"
+      },
+      {
+        "label": {
+          "en": "April and May",
+          "ar": "أبريل ومايو"
+        },
+        "opens": "08:00",
+        "closes": "17:30"
+      },
+      {
+        "label": {
+          "en": "Ramadan",
+          "ar": "رمضان"
+        },
+        "opens": "09:00",
+        "closes": "17:00"
+      }
+    ],
+    "history": {
+      "en": "Jerash preserves Roman streets, theatres, temples and a colonnaded plaza. The Jordan Tourism Board identifies the South Theatre, Oval Plaza and Hadrian’s Arch among the archaeological city’s principal landmarks. The coordinates below reference the South Theatre within the site.",
+      "ar": "تحتفظ جرش بشوارع ومسارح ومعابد رومانية وساحة تحيط بها الأعمدة. يذكر مجلس السياحة الأردني المسرح الجنوبي والساحة البيضاوية وقوس هادريان ضمن أبرز معالم المدينة الأثرية. تشير الإحداثيات أدناه إلى المسرح الجنوبي داخل الموقع."
+    }
+  }
+}

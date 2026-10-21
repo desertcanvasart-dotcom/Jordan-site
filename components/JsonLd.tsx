@@ -9,8 +9,9 @@ export default function JsonLd({ data, id }: JsonLdProps) {
       id={id}
       type="application/ld+json"
       dangerouslySetInnerHTML={{
-        __html: JSON.stringify(data).replace(/</g, "\\u003c"),
+        __html: serializeJsonLd(data),
       }}
     />
   );
 }
+import { serializeJsonLd } from "@/lib/jsonld";

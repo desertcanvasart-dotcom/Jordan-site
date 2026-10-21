@@ -1,5 +1,9 @@
 import { readFile } from "node:fs/promises";
 import { join } from "node:path";
+import { isLocale, oppositeLocale, type Locale } from "./i18n";
+import { translateDiyarHtml } from "./diyar-localization";
+import { siteOrigin } from "./business";
+import { enhanceDocument } from "./document";
 
 export const diyarPages = [
   "private-jordan-trips",
@@ -93,15 +97,53 @@ function cleanHtml(html: string) {
   return output;
 }
 
-export async function renderDiyarPage(page: DiyarPage | "home" = "home") {
-  const html = await readFile(join(process.cwd(), "Diyar", pageFiles[page]), "utf8");
-  return cleanHtml(html);
+export function isDiyarPage(value: string): value is DiyarPage {
+  return (diyarPages as readonly string[]).includes(value);
 }
 
-export async function diyarResponse(page: DiyarPage | "home" = "home") {
-  return new Response(await renderDiyarPage(page), {
+export async function renderDiyarTemplate(page: DiyarPage | "home" = "home", locale: Locale = "en") {
+  const html = await readFile(join(process.cwd(), "Diyar", pageFiles[page]), "utf8");
+  let output = cleanHtml(html);
+  if (locale === "ar") output = translateDiyarHtml(output, page);
+  output = output.replace(/<html[^>]*>/, `<html lang="${locale}" dir="${locale === "ar" ? "rtl" : "ltr"}">`);
+  // Localize only known page links; assets, anchors and external destinations stay intact.
+  output = output.replace(/href="\/([^"]*)"/g, (attribute, path: string) => {
+    if (path === "" || isDiyarPage(path)) return `href="/${locale}${path ? `/${path}` : ""}"`;
+    return attribute;
+  });
+  const other = oppositeLocale(locale);
+  const switchHref = `/${other}${page === "home" ? "" : `/${page}`}`;
+  const switchLabel = locale === "ar" ? "English" : "العربية";
+  output = output.replace(/<a class="lang"[^>]*>[\s\S]*?<\/a>/, `<a class="lang" href="${switchHref}" lang="${other}" hreflang="${other}" aria-label="${locale === "ar" ? "Switch to English" : "التبديل إلى العربية"}">${switchLabel}</a>`);
+  output = output.replace(/<a href="#">العربية<\/a>/g, `<a href="${switchHref}" lang="${other}" hreflang="${other}">${switchLabel}</a>`);
+  // Keep the phone number visually ordered inside the RTL form.
+  output = output.replace(/id="wa"/g, 'id="wa" dir="ltr"');
+  output = output.replace(/(<select id="lang"[^>]*>)([\s\S]*?)(<\/select>)/, (_match, open: string, options: string, close: string) => {
+    const label = locale === "ar" ? "العربية" : "English";
+    return `${open}${options.replace(`<option>${label}</option>`, `<option selected>${label}</option>`)}${close}`;
+  });
+  const menuLinks = output.match(/<div class="nav-links">([\s\S]*?)<\/div>/)?.[1];
+  if (menuLinks) {
+    const label = locale === "ar" ? "قائمة التنقل" : "Navigation menu";
+    const menu = `<details class="mobile-menu" data-mobile-menu><summary aria-label="${label}"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none"><path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></summary><div class="mobile-menu-links">${menuLinks}</div></details>`;
+    output = output.replace("</nav>", `${menu}</nav>`);
+  }
+  return output;
+}
+
+export async function renderDiyarPage(page: DiyarPage | "home" = "home", locale: Locale = "en", origin = siteOrigin()) {
+  return enhanceDocument(await renderDiyarTemplate(page, locale), page, locale, origin).html;
+}
+
+export async function diyarResponse(page: DiyarPage | "home" = "home", locale: Locale = "en", request?: Request) {
+  if (!isLocale(locale)) return new Response("Not found", { status: 404 });
+  if (request && !/^\/(ar|en)(\/|$)/.test(new URL(request.url).pathname)) {
+    return new Response(null, { status: 308, headers: { Location: `/${page === "home" ? "ar" : locale}${page === "home" ? "" : `/${page}`}` } });
+  }
+  return new Response(await renderDiyarPage(page, locale, siteOrigin(request)), {
     headers: {
       "Content-Type": "text/html; charset=utf-8",
+      "Content-Language": locale,
     },
   });
 }

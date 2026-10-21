@@ -1,9 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { headers } from "next/headers";
 import "./globals.css";
-import JsonLd from "@/components/JsonLd";
 import Interactions from "@/components/Interactions";
-import { buildSiteJsonLd } from "@/lib/schema";
 import { defaultLocale, dir, isLocale, type Locale } from "@/lib/i18n";
 import { buildPageMetadata } from "@/lib/metadata";
 
@@ -22,7 +20,6 @@ export default async function RootLayout({ children }: { children: React.ReactNo
   return (
     <html lang={locale} dir={dir(locale)}>
       <body>
-        <JsonLd id="site-jsonld" data={buildSiteJsonLd(locale)} />
         {children}
         <Interactions />
       </body>
