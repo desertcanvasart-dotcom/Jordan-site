@@ -28,7 +28,7 @@ Diyar supports Arabic and English. Arabic pages use /ar; English pages use /en. 
 
 ## What we offer
 
-Diyar plans private journeys within Jordan for families, couples and Gulf travelers. The route is shaped around the dates, party size, room preferences, pace and comfort level shared during consultation. The published journeys are sample starting points, not fixed departure groups.
+Diyar plans private journeys within Jordan for families, couples and world travelers. The route is shaped around the dates, party size, room preferences, pace and comfort level shared during consultation. The published journeys are sample starting points, not fixed departure groups.
 
 The site describes private transfers, guiding, hotel and camp coordination, and family-oriented pacing. Each journey page separates included services from exclusions. Optional destinations and activities must be confirmed in the written proposal. Destination pages describe places that may be included; they are not offers to sell entry tickets.
 

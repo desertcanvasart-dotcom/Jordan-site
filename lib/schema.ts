@@ -140,7 +140,7 @@ export function buildHomeJsonLd(locale: Locale) {
               "@type": "Country",
               name: locale === "ar" ? "الأردن" : "Jordan",
             },
-            touristType: locale === "ar" ? "مسافرون من الخليج" : "Gulf travelers",
+            touristType: locale === "ar" ? "مسافرون من الخليج" : "world travelers",
             offers: {
               "@type": "Offer",
               priceCurrency: "USD",

@@ -15,7 +15,7 @@ export const site = {
       name: "Founder name to be confirmed",
       jobTitle: "Founder",
       sameAs: "",
-      knowsAbout: ["Jordan private travel", "Gulf family travel", "Luxury Jordan itineraries"],
+      knowsAbout: ["Jordan private travel", "Worldwide family travel", "Luxury Jordan itineraries"],
     },
   ],
   logo: `${SITE_URL}/logo.svg`,
@@ -45,11 +45,11 @@ export const site = {
     "Wadi Rum luxury camps",
     "Dead Sea resorts",
     "Jordan family travel",
-    "Gulf traveler concierge",
+    "World traveler concierge",
     "Arabic-first travel planning",
   ],
   positioning:
-    "Arabic-first premium Jordan travel concierge designing private Jordan journeys for Gulf families, couples, and luxury travelers.",
+    "Arabic-first premium Jordan travel concierge designing private Jordan journeys for families worldwide, couples, and luxury travelers.",
   llmsOffer:
     "Diyar designs private Jordan journeys around travel desire rather than generic destination lists. Launch journeys include a three-day weekend escape, a five-day family journey, a luxury desert and Dead Sea escape, and a seven-day full Jordan route covering Amman, Jerash, Petra, Wadi Rum, the Dead Sea, and optional Aqaba extensions.",
   llmsPricing:
@@ -70,7 +70,7 @@ export const journeys: Journey[] = [
     slug: "weekend-escape",
     duration: "3 days",
     title: { ar: "عطلة نهاية الأسبوع", en: "Weekend Escape" },
-    bestFor: { ar: "الأزواج والعائلات من الخليج", en: "Couples and Gulf families" },
+    bestFor: { ar: "الأزواج والعائلات من الخليج", en: "Couples and families worldwide" },
     pace: { ar: "بحر ميت أو وادي رم بوتيرة هادئة", en: "Dead Sea or Wadi Rum at an easy pace" },
     image: "https://images.unsplash.com/photo-1548786811-dd6e453ccca7?auto=format&fit=crop&w=1100&q=82",
   },
@@ -175,7 +175,7 @@ export const copy = {
   en: {
     metaTitle: "Diyar | Private Jordan Travel Packages",
     metaDescription:
-      "Private Jordan travel packages for Gulf travelers: Petra, Wadi Rum, Dead Sea, Amman, Jerash and Aqaba with private planning and WhatsApp support.",
+      "Private Jordan travel packages for world travelers: Petra, Wadi Rum, Dead Sea, Amman, Jerash and Aqaba with private planning and WhatsApp support.",
     nav: {
       escapes: "Escapes",
       why: "Why us",
@@ -184,7 +184,7 @@ export const copy = {
       language: "العربية",
     },
     hero: {
-      kicker: "Private Jordan trips for Gulf travelers",
+      kicker: "Private Jordan trips for world travelers",
       title: "Jordan, beautifully planned around you.",
       text:
         "Private journeys to Petra, Wadi Rum, and the Dead Sea for families and couples, with trusted drivers, comfortable stays, and WhatsApp support from first message to final drop-off.",
