@@ -240,3 +240,20 @@ test('homepage concierge has localized controls, truthful configuration and work
     assert.match($('#escape a').eq(2).attr('href'), /^#journey-/);
   }
 });
+
+test('production serves localized pages from the static response cache without losing composer URLs', async () => {
+  const articles = JSON.parse(readFileSync(new URL('../content/articles.json', import.meta.url), 'utf8'));
+  for (const locale of ['en', 'ar']) {
+    const paths = [...pages.map(page => '/' + locale + (page ? '/' + page : '')), ...Object.keys(articles).map(slug => '/' + locale + '/journal/' + slug)];
+    for (const path of paths) {
+      const response = await fetch(base + path, { method: 'HEAD' });
+      assert.equal(response.status, 200, path);
+      assert.equal(response.headers.get('x-nextjs-cache'), 'HIT', `Page was rendered at request time: ${path}`);
+      assert.equal(response.headers.get('content-language'), locale, path);
+    }
+    const plain = await (await fetch(base + '/' + locale)).text();
+    const shared = await fetch(base + '/' + locale + '?who=1&days=2&pace=0&tier=1&need=1');
+    assert.equal(shared.headers.get('x-nextjs-cache'), 'HIT');
+    assert.equal(await shared.text(), plain, 'Preferences are restored in the browser; the shared URL must retain the same complete HTML');
+  }
+});

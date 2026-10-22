@@ -1,0 +1,673 @@
+{
+  "checkedAt": "2026-10-22",
+  "lighthouseVersion": "13.5.0",
+  "methodology": "48 independent cold-cache Lighthouse runs, default simulated mobile throttling, production Next.js build on http://127.0.0.1:3000.",
+  "publicPageCount": 48,
+  "minimumPerformance": 96,
+  "maximumPerformance": 100,
+  "homepages": {
+    "en": {
+      "path": "/en",
+      "scores": {
+        "performance": 99,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "fcp": 1336.54,
+      "lcp": 1985.08,
+      "cls": 0,
+      "tbt": 0
+    },
+    "ar": {
+      "path": "/ar",
+      "scores": {
+        "performance": 96,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "fcp": 2005.2801,
+      "lcp": 2455.2801,
+      "cls": 0.003717098894964167,
+      "tbt": 0
+    }
+  },
+  "designVerification": {
+    "byteIdenticalHtmlPages": 48,
+    "cssJavaScriptFontsAndImagesChanged": false,
+    "staticCacheHits": 48,
+    "desktopAndMobileChecked": true
+  },
+  "validation": {
+    "build": "passed",
+    "lint": "passed",
+    "integrationTestsPassed": 11
+  },
+  "pages": [
+    {
+      "path": "/en/plan-your-trip",
+      "scores": {
+        "performance": 98,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "fcp": 1668.5266000000001,
+      "lcp": 1858.5266000000001,
+      "cls": 0,
+      "tbt": 100
+    },
+    {
+      "path": "/en",
+      "scores": {
+        "performance": 99,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "fcp": 1336.54,
+      "lcp": 1985.08,
+      "cls": 0,
+      "tbt": 0
+    },
+    {
+      "path": "/en/private-jordan-trips",
+      "scores": {
+        "performance": 97,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "fcp": 1388.3751,
+      "lcp": 2164.7502,
+      "cls": 0,
+      "tbt": 32
+    },
+    {
+      "path": "/en/destinations",
+      "scores": {
+        "performance": 98,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "fcp": 1260.277,
+      "lcp": 2132.554,
+      "cls": 0,
+      "tbt": 0
+    },
+    {
+      "path": "/en/petra",
+      "scores": {
+        "performance": 99,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "fcp": 1114.0606,
+      "lcp": 1974.1212,
+      "cls": 0,
+      "tbt": 0
+    },
+    {
+      "path": "/en/wadi-rum",
+      "scores": {
+        "performance": 99,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "fcp": 1274.36305,
+      "lcp": 1895.7261000000003,
+      "cls": 0,
+      "tbt": 1.0000000000002274
+    },
+    {
+      "path": "/en/dead-sea",
+      "scores": {
+        "performance": 99,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "fcp": 1155.0064,
+      "lcp": 2061.0128,
+      "cls": 0,
+      "tbt": 0
+    },
+    {
+      "path": "/en/jerash",
+      "scores": {
+        "performance": 97,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "fcp": 1309.7258273993084,
+      "lcp": 2307.451654798617,
+      "cls": 0,
+      "tbt": 120
+    },
+    {
+      "path": "/en/amman",
+      "scores": {
+        "performance": 99,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "fcp": 1144.2647827720698,
+      "lcp": 1818.5295655441396,
+      "cls": 0,
+      "tbt": 0
+    },
+    {
+      "path": "/en/aqaba",
+      "scores": {
+        "performance": 99,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "fcp": 1134.0719226870015,
+      "lcp": 2041.143845374003,
+      "cls": 0,
+      "tbt": 0
+    },
+    {
+      "path": "/en/weekend-escape",
+      "scores": {
+        "performance": 99,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "fcp": 1206.0701,
+      "lcp": 1988.1401999999998,
+      "cls": 0,
+      "tbt": 26
+    },
+    {
+      "path": "/en/family-journey",
+      "scores": {
+        "performance": 99,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "fcp": 1238.7435,
+      "lcp": 1930.487,
+      "cls": 0,
+      "tbt": 6
+    },
+    {
+      "path": "/en/full-jordan-journey",
+      "scores": {
+        "performance": 99,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "fcp": 1191.90785,
+      "lcp": 2135.8157,
+      "cls": 0,
+      "tbt": 10
+    },
+    {
+      "path": "/en/luxury-desert-dead-sea",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "fcp": 1216.49405,
+      "lcp": 1749.9881,
+      "cls": 0,
+      "tbt": 17
+    },
+    {
+      "path": "/en/family-travel",
+      "scores": {
+        "performance": 99,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "fcp": 1274.5739910892166,
+      "lcp": 2087.1479821784333,
+      "cls": 0,
+      "tbt": 0
+    },
+    {
+      "path": "/en/luxury-travel",
+      "scores": {
+        "performance": 99,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "fcp": 1418.1682455758023,
+      "lcp": 1759.1682455758023,
+      "cls": 0,
+      "tbt": 100
+    },
+    {
+      "path": "/en/about-trust",
+      "scores": {
+        "performance": 99,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "fcp": 1340.0872,
+      "lcp": 1611.0872,
+      "cls": 0,
+      "tbt": 100
+    },
+    {
+      "path": "/en/blog",
+      "scores": {
+        "performance": 96,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "fcp": 1375.4033,
+      "lcp": 1913.4033,
+      "cls": 0,
+      "tbt": 193
+    },
+    {
+      "path": "/en/privacy",
+      "scores": {
+        "performance": 99,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "fcp": 1273.7858999999999,
+      "lcp": 1555.5717999999997,
+      "cls": 0,
+      "tbt": 12
+    },
+    {
+      "path": "/en/terms",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "fcp": 1353.78755,
+      "lcp": 1675.5751,
+      "cls": 0,
+      "tbt": 34
+    },
+    {
+      "path": "/en/cancellation-policy",
+      "scores": {
+        "performance": 98,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "fcp": 1209.4273535044902,
+      "lcp": 1666.8547070089803,
+      "cls": 0,
+      "tbt": 5
+    },
+    {
+      "path": "/en/journal/planning-a-private-jordan-trip",
+      "scores": {
+        "performance": 99,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "fcp": 1130.4881,
+      "lcp": 1834.9762,
+      "cls": 0,
+      "tbt": 0
+    },
+    {
+      "path": "/en/journal/choosing-a-family-itinerary",
+      "scores": {
+        "performance": 99,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "fcp": 1273.72045,
+      "lcp": 1924.4409,
+      "cls": 0,
+      "tbt": 32
+    },
+    {
+      "path": "/en/journal/understanding-your-trip-quote",
+      "scores": {
+        "performance": 99,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "fcp": 1154.6003500000002,
+      "lcp": 1983.2007000000003,
+      "cls": 0,
+      "tbt": 0
+    },
+    {
+      "path": "/ar/plan-your-trip",
+      "scores": {
+        "performance": 98,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "fcp": 1383.084074399494,
+      "lcp": 2299.626111599241,
+      "cls": 0.0002852688631173444,
+      "tbt": 0
+    },
+    {
+      "path": "/ar",
+      "scores": {
+        "performance": 96,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "fcp": 2005.2801,
+      "lcp": 2455.2801,
+      "cls": 0.003717098894964167,
+      "tbt": 0
+    },
+    {
+      "path": "/ar/private-jordan-trips",
+      "scores": {
+        "performance": 97,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "fcp": 1525.5466,
+      "lcp": 2513.3199,
+      "cls": 2.207190201569451e-05,
+      "tbt": 0
+    },
+    {
+      "path": "/ar/destinations",
+      "scores": {
+        "performance": 97,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "fcp": 1517.2296542571348,
+      "lcp": 2500.8444813857022,
+      "cls": 1.602480557303848e-05,
+      "tbt": 0
+    },
+    {
+      "path": "/ar/petra",
+      "scores": {
+        "performance": 98,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "fcp": 1519.1270999999997,
+      "lcp": 2278.6906499999996,
+      "cls": 1.96530634386321e-05,
+      "tbt": 0
+    },
+    {
+      "path": "/ar/wadi-rum",
+      "scores": {
+        "performance": 98,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "fcp": 1529.4389151680994,
+      "lcp": 2294.1583727521493,
+      "cls": 1.96530634386321e-05,
+      "tbt": 0
+    },
+    {
+      "path": "/ar/dead-sea",
+      "scores": {
+        "performance": 98,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "fcp": 1522.2429000000002,
+      "lcp": 2358.3643500000003,
+      "cls": 0.00040491089020182894,
+      "tbt": 0
+    },
+    {
+      "path": "/ar/jerash",
+      "scores": {
+        "performance": 97,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "fcp": 1512.7148263487518,
+      "lcp": 2494.072239523128,
+      "cls": 1.96530634386321e-05,
+      "tbt": 0
+    },
+    {
+      "path": "/ar/amman",
+      "scores": {
+        "performance": 99,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "fcp": 1515.7594,
+      "lcp": 1898.6390999999999,
+      "cls": 1.96530634386321e-05,
+      "tbt": 0
+    },
+    {
+      "path": "/ar/aqaba",
+      "scores": {
+        "performance": 97,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "fcp": 1612.4990745879536,
+      "lcp": 2493.7486118819306,
+      "cls": 1.96530634386321e-05,
+      "tbt": 0
+    },
+    {
+      "path": "/ar/weekend-escape",
+      "scores": {
+        "performance": 97,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "fcp": 1581.29173890529,
+      "lcp": 2446.937608357935,
+      "cls": 1.753657968370249e-05,
+      "tbt": 0
+    },
+    {
+      "path": "/ar/family-journey",
+      "scores": {
+        "performance": 98,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "fcp": 1552.5783000000001,
+      "lcp": 2253.86745,
+      "cls": 1.753657968370249e-05,
+      "tbt": 0
+    },
+    {
+      "path": "/ar/full-jordan-journey",
+      "scores": {
+        "performance": 97,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "fcp": 1635.4567500000003,
+      "lcp": 2391.4567500000003,
+      "cls": 0.05316612198035238,
+      "tbt": 19
+    },
+    {
+      "path": "/ar/luxury-desert-dead-sea",
+      "scores": {
+        "performance": 99,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "fcp": 1465.1491999999998,
+      "lcp": 2122.7237999999998,
+      "cls": 0.00506379936693655,
+      "tbt": 0
+    },
+    {
+      "path": "/ar/family-travel",
+      "scores": {
+        "performance": 98,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "fcp": 1538.0308,
+      "lcp": 2307.0461999999998,
+      "cls": 2.509545023702253e-05,
+      "tbt": 0
+    },
+    {
+      "path": "/ar/luxury-travel",
+      "scores": {
+        "performance": 99,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "fcp": 1511.6417000000001,
+      "lcp": 1967.4625500000002,
+      "cls": 2.328132130422572e-05,
+      "tbt": 0
+    },
+    {
+      "path": "/ar/about-trust",
+      "scores": {
+        "performance": 99,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "fcp": 1527.1599,
+      "lcp": 1915.7398500000002,
+      "cls": 2.630486952555374e-05,
+      "tbt": 0
+    },
+    {
+      "path": "/ar/blog",
+      "scores": {
+        "performance": 98,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "fcp": 1524.1704188665844,
+      "lcp": 2286.2556282998767,
+      "cls": 1.239654770744486e-05,
+      "tbt": 0
+    },
+    {
+      "path": "/ar/privacy",
+      "scores": {
+        "performance": 99,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "fcp": 1522.2831999999999,
+      "lcp": 1833.4247999999998,
+      "cls": 0.003508121320400046,
+      "tbt": 0
+    },
+    {
+      "path": "/ar/terms",
+      "scores": {
+        "performance": 99,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "fcp": 1531.8222999999998,
+      "lcp": 1847.7334499999997,
+      "cls": 0.0032887165358699713,
+      "tbt": 0
+    },
+    {
+      "path": "/ar/cancellation-policy",
+      "scores": {
+        "performance": 99,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "fcp": 1531.6251000000002,
+      "lcp": 1847.4376500000003,
+      "cls": 0.003454436541981355,
+      "tbt": 0
+    },
+    {
+      "path": "/ar/journal/planning-a-private-jordan-trip",
+      "scores": {
+        "performance": 98,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "fcp": 1513.9583000000002,
+      "lcp": 2195.9374500000004,
+      "cls": 0.0008891435601407912,
+      "tbt": 0
+    },
+    {
+      "path": "/ar/journal/choosing-a-family-itinerary",
+      "scores": {
+        "performance": 96,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "fcp": 1547.8075,
+      "lcp": 2621.71125,
+      "cls": 0.0008891435601407912,
+      "tbt": 0
+    },
+    {
+      "path": "/ar/journal/understanding-your-trip-quote",
+      "scores": {
+        "performance": 98,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "fcp": 1521.3282,
+      "lcp": 2206.9923,
+      "cls": 0.0008891435601407912,
+      "tbt": 0
+    }
+  ]
+}

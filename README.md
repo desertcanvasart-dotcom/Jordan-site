@@ -67,3 +67,23 @@ The seasonal helper deliberately uses sourced qualitative climate guidance, not 
 monthly temperature numbers, school calendars or assumed Eid dates. The desert photograph
 is a destination photograph, not a claim that a particular camp is included. The English
 and Arabic positioning remain intentionally different (homepage review item 10).
+
+### Production page delivery
+
+All 48 published Arabic/English HTML pages are prerendered during `npm run build`
+using the route handlers' explicit `generateStaticParams` lists. Production requests
+serve the built HTML directly; template parsing, translation and JSON-LD generation
+happen at build time. Unknown locales, pages and articles return 404.
+
+Content or `SITE_URL` changes require a new build and server restart. Set production
+environment variables **before** building. Deploy the complete new build atomically
+rather than copying individual `.next` files into a running release. The existing
+`npm run build` / `npm run start` workflow remains the same. Composer query parameters
+are restored client-side and do not make the HTML personalized; the public content API
+and legacy redirects retain their existing behavior.
+
+For a reproducible cold mobile audit, start the production build and run Lighthouse
+13.5.0 against `/en` and `/ar`, with its default simulated mobile throttling and all four
+categories. Use a fresh Lighthouse run for each URL, without concurrent builds or other
+audits. The integration suite also checks static-cache delivery across every published
+page, both language headers, 404s and the shared composer URL.
