@@ -70,7 +70,7 @@ export const journeys: Journey[] = [
     slug: "weekend-escape",
     duration: "3 days",
     title: { ar: "عطلة نهاية الأسبوع", en: "Weekend Escape" },
-    bestFor: { ar: "الأزواج والعائلات من الخليج", en: "Couples and families worldwide" },
+    bestFor: { ar: "الإخوة العرب من الأزواج والعائلات", en: "Couples and families worldwide" },
     pace: { ar: "بحر ميت أو وادي رم بوتيرة هادئة", en: "Dead Sea or Wadi Rum at an easy pace" },
     image: "https://images.unsplash.com/photo-1548786811-dd6e453ccca7?auto=format&fit=crop&w=1100&q=82",
   },
@@ -104,7 +104,7 @@ export const copy = {
   ar: {
     metaTitle: "ديار | رحلات الأردن الخاصة",
     metaDescription:
-      "رحلات أردن خاصة ومصممة للعائلات والمسافرين من الخليج: البتراء، وادي رم، البحر الميت، عمّان، جرش والعقبة مع تخطيط خاص ودعم واتساب.",
+      "رحلات أردن خاصة ومصممة للإخوة العرب وعائلاتهم: البتراء، وادي رم، البحر الميت، عمّان، جرش والعقبة مع تخطيط خاص ودعم واتساب.",
     nav: {
       escapes: "الرحلات",
       why: "لماذا نحن",
@@ -113,7 +113,7 @@ export const copy = {
       language: "English",
     },
     hero: {
-      kicker: "رحلات أردن خاصة للمسافرين من الخليج",
+      kicker: "رحلات أردن خاصة للإخوة العرب",
       title: "الأردن، مخطط بعناية حولك.",
       text:
         "نصمم رحلات خاصة إلى البتراء ووادي رم والبحر الميت للعائلات والأزواج، مع سائقين موثوقين، إقامة مريحة، ودعم واتساب من أول رسالة حتى العودة.",
